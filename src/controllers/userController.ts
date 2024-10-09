@@ -11,3 +11,13 @@ export const getUsers = async (_req: Request, res: Response) => {
     res.status(500).json(err);
   }
 }
+
+  // create a new user
+  export const createUser = async (req: Request, res: Response) => {
+    try {
+      const createdUser = await User.create(req.body);
+      res.json(createdUser);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  }
