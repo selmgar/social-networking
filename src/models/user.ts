@@ -47,4 +47,6 @@ userSchema.virtual('friendCount').get(function(this: IUser) {
 
 const User = model<IUser>('User', userSchema);
 
+User.deleteMany();
+
 export default User;

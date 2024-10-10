@@ -41,4 +41,6 @@ thoughtSchema.virtual('reactionCount').get(function(this: IThought) {
 
 const Thought = model<IThought>('Thought', thoughtSchema);
 
+Thought.deleteMany();
+
 export default Thought;
